@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Rescue</title>
+    <link role="stylesheet" href="rescue.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        #na {
+            background-color: #d80032;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #bb {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        #emergency-img, #request-img {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #emergency-img img, #request-img img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        #rescue-form, #emergency-form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide the forms initially */
+        }
+        #rescue-form h2, #emergency-form h2 {
+            color: #d80032;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            resize: none;
+            height: 100px;
+        }
+        #submit-btn {
+            background-color: #d80032;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        #submit-btn:hover {
+            background-color: #f78ca2;
+        }
+        #submitted-message {
+            text-align: center;
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+            display: none; /* Hide the message initially */
+        }
+    </style>
+</head>
+<body>
+    <div id="na">Animal Rescue</div>
+    <div id="bb">
+        <button style="background-color: #d80032;" id="emergency-btn">EMERGENCY RESCUE</button>
+        <button style="background-color: #f78ca2;" id="request-btn">REQUEST RESCUE</button>
+    </div>
+
+    <!-- Emergency Rescue Image -->
+    <div id="emergency-img">
+        <img src="r.png" alt="Emergency Rescue">
+    </div>
+
+    <!-- Rescue Request Image -->
+    <div id="request-img">
+        <img src="resuce.png" alt="Rescue Request">
+    </div>
+
+    <!-- Emergency Rescue Form -->
+    <div id="emergency-form">
+        <h2>Emergency Rescue Request</h2>
+        <form id="emergency-form-element">
+            <!-- Form content here (same as previous code) -->
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input type="text" id="contact" name="contact" placeholder="Enter your contact number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Enter the location of the animal" required>
+            </div>
+            <div class="form-group">
+                <label for="animal-type">Type of Animal</label>
+                <select id="animal-type" name="animal-type" required>
+                    <option value="">Select Animal Type</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="injury-type">Type of Injury/Accident</label>
+                <select id="injury-type" name="injury-type" required>
+                    <option value="">Select Injury/Accident Type</option>
+                    <option value="broken_leg">Broken Leg</option>
+                    <option value="hit_by_vehicle">Hit by Vehicle</option>
+                    <option value="bleeding">Bleeding</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Describe the condition of the animal or any additional information" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Upload Photo (Optional)</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </div>
+
+            <button type="submit" id="submit-btn">Submit Rescue Request</button>
+        </form>
+    </div>
+
+    <!-- Standard Rescue Request Form -->
+    <div id="rescue-form">
+        <h2>Rescue Request Form</h2>
+        <form id="rescue-form-element">
+            <!-- Form content here (same as previous code) -->
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input type="text" id="contact" name="contact" placeholder="Enter your contact number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Enter the location of the animal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="animal-type">Type of Animal</label>
+                <select id="animal-type" name="animal-type" required>
+                    <option value="">Select Animal Type</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Describe the condition of the animal or any additional information" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Upload Photo (Optional)</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </div>
+
+            <button type="submit" id="submit-btn">Submit Rescue Request</button>
+        </form>
+    </div>
+
+    <div id="submitted-message">Rescue Request Submitted Successfully!</div>
+
+    <script>
+        // Handle "Request Rescue" button click
+        document.getElementById('request-btn').addEventListener('click', function() {
+            document.getElementById('rescue-form').style.display = 'block'; // Show the rescue form
+            document.getElementById('emergency-form').style.display = 'none'; // Hide the emergency form
+            document.getElementById('request-img').style.display = 'block'; // Show rescue image
+            document.getElementById('emergency-img').style.display = 'none'; // Hide emergency image
+        });
+
+        // Handle "Emergency Rescue" button click
+        document.getElementById('emergency-btn').addEventListener('click', function() {
+            document.getElementById('emergency-form').style.display = 'block'; // Show the emergency form
+            document.getElementById('rescue-form').style.display = 'none'; // Hide the rescue form
+            document.getElementById('emergency-img').style.display = 'block'; // Show emergency image
+            document.getElementById('request-img').style.display = 'none'; // Hide rescue image
+        });
+
+        // Handle form submission logic (same as before)
+        // ...
+    </script>
+</body>
+</html>

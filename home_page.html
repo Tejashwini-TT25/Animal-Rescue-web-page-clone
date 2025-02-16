@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Alives</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Logo and Header */
+        #logo {
+            background-color: #d80032;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #logo img {
+            height: 60px;
+            width: 60px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        #logo h1 {
+            display: inline-block;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        #nav {
+            background-color: #3d0c11;
+            padding: 15px;
+            text-align: center;
+        }
+
+        #nav img {
+            height: 40px;
+            width: 40px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        #nav a {
+            color: white;
+            font-size: 18px;
+            margin: 0 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        #nav a:hover {
+            color: #f78ca2;
+        }
+
+        /* Home Section */
+        #home {
+            text-align: center;
+            padding: 60px 20px;
+            background-image: url('KUTTA.jpg'); /* Using the logo.jpg image */
+            background-size:contain; /* Makes the image cover the entire section */
+            background-position: center; /* Centers the image */
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background-attachment:fixed; /* Makes the background stay fixed while scrolling */
+            /* height:500px; */
+      
+        }
+
+        #home h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Buttons Styling */
+        .hh {
+            margin-top: 30px;
+        }
+
+        .bb {
+            background-color: #d80032;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            margin: 15px;
+        }
+
+        .bb:hover {
+            background-color: #f78ca2;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #3d0c11;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Logo and Title -->
+    <div id="logo">
+        <img src="logo.jpg" alt="Heart Alives Logo" id="l1">
+        <h1>HEART ALIVES</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div id="nav">
+        <img src="logo.jpg" alt="Heart Alives Logo" id="n1">
+        <a href="home_page.html">Home Page</a>
+        <a href="About.html">About Us</a>
+        <a href="d.html">Donate</a>
+        <a href="rescue.html" >Rescue</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Home Section -->
+    <div id="home">
+        <h1>A TRUE ANIMAL LOVER, LOVES EVERY ANIMAL..!!</h1>
+        <div class="hh">
+            <a href="rescue.html"><button class="bb">EMERGENCY RESCUE</button></a><br><br>
+            <a href="rescue.html"><button class="bb">RESCUE REQUEST</button></a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Heart Alives. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

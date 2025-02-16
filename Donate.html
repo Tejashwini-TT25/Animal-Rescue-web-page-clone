@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="donate.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        #nav {
+            background-color: #d80032;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #nnn {
+            padding: 20px;
+            text-align: center;
+        }
+        #dd {
+            background-image: url('cat11.jpg');
+            background-size:cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .bb {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        button {
+            background-color: #f78ca2;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        button:hover {
+            background-color: #d80032;
+        }
+        #payment-options {
+            margin-top: 40px;
+        }
+        .payment-method {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            text-align: left;
+        }
+        .payment-method img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .payment-method h3 {
+            margin-top: 0;
+            color: #d80032;
+        }
+        .payment-method p {
+            margin: 5px 0;
+        }
+        #qr-code {
+            text-align: center;
+            margin: 20px auto;
+        }
+        #qr-code img {
+            border: 5px solid #ddd;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">Donate</div>
+    <div id="nnn">
+        <div id="dd">
+            ONLY YOU CAN GIVE THEM HOPE...!!
+        </div>
+        <p class="bb">By clicking this button you can donate via credit card, debit card, ApplePay, & GooglePay.</p>
+        <button>DONATE NOW</button>
+
+        <div id="payment-options">
+            <h2>Other Payment Methods</h2>
+
+            <!-- UPI Section -->
+            <div class="payment-method">
+                <h3><img src="upi_icon.png" alt="UPI Icon" width="30"> UPI</h3>
+                <p>UPI ID: <strong>heartalives@upi</strong></p>
+                <button>Pay via UPI</button>
+            </div>
+
+            <!-- PhonePe Section -->
+            <div class="payment-method">
+                <h3><img src="phonepe_icon.png" alt="PhonePe Icon" width="30"> PhonePe</h3>
+                <p>PhonePe ID: <strong>heartalives@phonepe</strong></p>
+                <button>Pay via PhonePe</button>
+            </div>
+
+            <!-- Paytm Section -->
+            <div class="payment-method">
+                <h3><img src="paytm_icon.png" alt="Paytm Icon" width="30"> Paytm</h3>
+                <p>Paytm ID: <strong>heartalives@paytm</strong></p>
+                <button>Pay via Paytm</button>
+            </div>
+
+            <!-- Bank Account Details -->
+            <div class="payment-method">
+                <h3><img src="bank_icon.png" alt="Bank Icon" width="30"> Bank Account</h3>
+                <p>Account Name: <strong>Heart Alives</strong></p>
+                <p>Account Number: <strong>1234567890</strong></p>
+                <p>Bank: <strong>XYZ Bank</strong></p>
+                <p>IFSC Code: <strong>XYZB0001234</strong></p>
+            </div>
+
+            <!-- QR Code Section -->
+            <div id="qr-code">
+                <h3>Scan QR Code</h3>
+                <p>Scan the QR code below to donate directly:</p>
+                <img src="scanner.png" alt="QR Code for Donation" width="200" height="200">
+            </div>
+        </div>
+    </div>
+</body
+</html>
